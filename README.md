@@ -1,4 +1,4 @@
-# netlify-test
+# netlify-test application
 
 ## Project setup
 ```
