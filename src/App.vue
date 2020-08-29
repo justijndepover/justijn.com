@@ -10,7 +10,7 @@
                 <path d="M150,5.1L4.6,203.7L150,294.9l145.4-91.2L150,5.1z M150,272.3L32.1,198.4l31.7-43.3l27.8,17.4l-13.8,18.8 l36.5,22.9v-72.7V86.2L150,37.4V272.3z M185.7,141.5l36.5,49.8l-36.5,22.9V141.5z"/>
             </svg>
 
-            <h1 class="text-3xl md:text-5xl mt-4 uppercase font-bold text-red-300 tracking-wider" style="font-family: 'Hind'">Justijn.pro</h1>
+            <h1 class="text-3xl md:text-5xl mt-4 uppercase font-bold text-red-300 tracking-wider" style="font-family: 'Hind'">justijn.netlify.app</h1>
         </div>
     </div>
 </template>
