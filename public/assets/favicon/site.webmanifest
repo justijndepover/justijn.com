@@ -1,7 +1,6 @@
 {
     "name": "justijn.netlify.app",
     "short_name": "justijn.netlify.app",
-    "start_url": "/",
     "icons": [
         {
             "src": "/assets/favicon/android-chrome-192x192.png",
