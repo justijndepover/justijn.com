@@ -31,7 +31,7 @@
 
                 <span class="text-lg text-gray-500 dark:text-gray-400">
                     A passionate full stack developer from belgium,
-                    <br>currently working at <a class="font-bold hover:text-red-400" target="_blank" rel="nofollow, noreferrer" href="https://www.in2red.com">in2red</a>.
+                    <br>currently working at <a class="font-bold hover:text-red-400" target="_blank" rel="nofollow, noreferrer" href="https://www.in2red.be">in2red</a>.
                     <br><br>I build and maintain a couple <a class="font-bold hover:text-red-400" target="_blank" rel="nofollow, noreferrer" href="https://github.com/justijndepover">open source projects</a> on Github. Mostly Laravel.
                 </span>
 
