@@ -6,14 +6,16 @@
 
 <script>
     export default {
-        props: ["value"],
+        props: {
+            value: {
+                type: Boolean,
+                default: false,
+            },
+        },
         data() {
             return {
-                darkmode: false,
+                darkmode: this.value,
             }
-        },
-        mounted() {
-            this.darkmode = this.value;
         },
         watch: {
             darkmode(val) {
