@@ -1,7 +1,7 @@
 <template>
     <div id="app" class="flex flex-col h-screen relative">
         <header class="w-full max-w-6xl mx-auto px-4 py-8 text-gray-500 dark:text-gray-700">
-            <a href="mailto:justijndepover@gmail.com" class="inline-flex items-center justify-start hover:text-green-400 transition-color duration-200">
+            <a href="mailto:justijndepover@gmail.com" aria-label="mail justijndepover@gmail.com" class="inline-flex items-center justify-start hover:text-green-400 transition-color duration-200">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 mr-2">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76" />
                 </svg>
@@ -19,7 +19,7 @@
                 <svg class="hidden lg:block absolute left-full transform -translate-x-1/2" width="404" height="300" fill="none" viewBox="0 0 404 300" style="left: 100%; z-index: -10">
                     <defs>
                         <pattern id="b1e6e422-73f8-40a6-b5d9-c8586e37e0e7" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                            <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor"></rect>
+                            <rect x="0" y="0" width="4" height="4" class="text-gray-200 dark:text-gray-800" fill="currentColor"></rect>
                         </pattern>
                     </defs>
                     <rect width="404" height="300" fill="url(#b1e6e422-73f8-40a6-b5d9-c8586e37e0e7)"></rect>
