@@ -61,7 +61,7 @@ export default {
     mounted() {
         if (document.cookie.indexOf('darkmode=true') != -1) {
             this.darkmode = true;
-            document.documentElement.classList.add('darkmode');
+            document.documentElement.classList.add('dark');
         }
     }
 }

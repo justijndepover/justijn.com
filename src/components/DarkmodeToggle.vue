@@ -20,10 +20,10 @@
         watch: {
             darkmode(val) {
                 if (val) {
-                    document.documentElement.classList.add('darkmode');
+                    document.documentElement.classList.add('dark');
                     document.cookie = "darkmode=true";
                 } else {
-                    document.documentElement.classList.remove('darkmode');
+                    document.documentElement.classList.remove('dark');
                     document.cookie = "darkmode=false";
                 }
             }
