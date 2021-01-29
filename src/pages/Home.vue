@@ -1,18 +1,6 @@
 <template>
     <div id="app" class="flex flex-col h-screen relative">
-        <header class="w-full max-w-6xl mx-auto px-4 py-8 text-gray-500 dark:text-gray-700">
-            <a href="mailto:justijndepover@gmail.com" aria-label="mail justijndepover@gmail.com" class="inline-flex items-center justify-start hover:text-green-400 transition-color duration-200">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 mr-2">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76" />
-                </svg>
-                <span class="hidden md:block">justijndepover@gmail.com</span>
-            </a>
-        </header>
-
-        <div class="absolute top-0 right-0 p-8 flex items-center">
-            <span class="uppercase text-xs text-gray-500 mr-2">darkmode</span>
-            <darkmode-toggle :value="darkmode"></darkmode-toggle>
-        </div>
+        <navigation />
 
         <div class="flex-1 flex items-center justify-center flex-col text-center">
             <div class="relative">
@@ -32,7 +20,7 @@
                 <span class="text-lg text-gray-500 dark:text-gray-400">
                     A passionate full stack developer from belgium,
                     <br>currently working at <a class="font-bold hover:text-red-400" target="_blank" rel="nofollow, noreferrer" href="https://www.in2red.be">in2red</a>.
-                    <br><br>I build and maintain a couple <a class="font-bold hover:text-red-400" target="_blank" rel="nofollow, noreferrer" href="https://github.com/justijndepover">open source projects</a> on Github. Mostly Laravel.
+                    <!-- <br><br>I build and maintain a couple <a class="font-bold hover:text-red-400" target="_blank" rel="nofollow, noreferrer" href="https://github.com/justijndepover">open source projects</a> on Github. Mostly Laravel. -->
                 </span>
 
                 <div class="mt-4 flex justify-center">
@@ -46,12 +34,14 @@
 </template>
 
 <script>
-import DarkmodeToggle from '../components/DarkmodeToggle.vue';
+// import DarkmodeToggle from '../components/DarkmodeToggle.vue';
+import Navigation from '../components/Navigation.vue';
 
 export default {
     name: 'Home',
     components: {
-        DarkmodeToggle,
+        // DarkmodeToggle,
+        Navigation,
     },
     data() {
         return {
