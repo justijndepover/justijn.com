@@ -46,10 +46,10 @@
 </template>
 
 <script>
-import DarkmodeToggle from './components/DarkmodeToggle.vue';
+import DarkmodeToggle from '../components/DarkmodeToggle.vue';
 
 export default {
-    name: 'App',
+    name: 'Home',
     components: {
         DarkmodeToggle,
     },
