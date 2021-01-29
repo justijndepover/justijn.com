@@ -55,14 +55,14 @@ export default {
     },
     data() {
         return {
-            darkmode: (document.cookie.indexOf('darkmode=true') != -1),
-        }
+            darkmode: (document.cookie.indexOf('darkmode=true') !== -1),
+        };
     },
     mounted() {
-        if (document.cookie.indexOf('darkmode=true') != -1) {
+        if (document.cookie.indexOf('darkmode=true') !== -1) {
             this.darkmode = true;
             document.documentElement.classList.add('dark');
         }
-    }
-}
+    },
+};
 </script>

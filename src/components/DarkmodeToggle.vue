@@ -5,30 +5,30 @@
 </template>
 
 <script>
-    export default {
-        props: {
-            value: {
-                type: Boolean,
-                default: false,
-            },
+export default {
+    props: {
+        value: {
+            type: Boolean,
+            default: false,
         },
-        data() {
-            return {
-                darkmode: this.value,
+    },
+    data() {
+        return {
+            darkmode: this.value,
+        };
+    },
+    watch: {
+        darkmode(val) {
+            if (val) {
+                document.documentElement.classList.add('dark');
+                document.cookie = 'darkmode=true';
+            } else {
+                document.documentElement.classList.remove('dark');
+                document.cookie = 'darkmode=false';
             }
         },
-        watch: {
-            darkmode(val) {
-                if (val) {
-                    document.documentElement.classList.add('dark');
-                    document.cookie = "darkmode=true";
-                } else {
-                    document.documentElement.classList.remove('dark');
-                    document.cookie = "darkmode=false";
-                }
-            }
-        }
-    }
+    },
+};
 </script>
 
 <style scoped>
