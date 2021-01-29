@@ -11,6 +11,13 @@
                     <p>Check what the <pre class="inline bg-gray-100 text-xs font-medium p-1 rounded">Keycode</pre> or <pre class="inline bg-gray-100 text-xs font-medium p-1 rounded">Key</pre> is for a particular key press</p>
                 </template>
             </panel-link>
+
+            <panel-link :to="{ name: 'timestamp' }">
+                Timestamp
+                <template #description>
+                    <p>A set of timestamp functions</p>
+                </template>
+            </panel-link>
         </div>
     </div>
 </template>
