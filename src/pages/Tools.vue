@@ -15,6 +15,13 @@
                 <p>A set of timestamp functions</p>
             </template>
         </panel-link>
+
+        <panel-link :to="{ name: 'image-generator' }">
+            Image generator
+            <template #description>
+                <p>Generate a placeholder image with a specific width & height</p>
+            </template>
+        </panel-link>
     </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full max-w-2xl mx-auto px-4">
+    <div class="w-full max-w-2xl mx-auto px-4 pb-4">
         <div class="flex items-end mb-4">
             <div class="flex-1">
                 <router-link :to="{ name: 'tools' }" class="inline-block outline-none focus:outline-none focus:bg-gray-200 -ml-2 -mt-1 px-2 py-1 rounded-md mb-2">
