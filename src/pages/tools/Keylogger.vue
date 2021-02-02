@@ -1,16 +1,5 @@
 <template>
-    <div class="w-full max-w-2xl mx-auto px-4">
-        <router-link :to="{ name: 'tools' }" class="inline-block outline-none focus:outline-none focus:bg-gray-200 -ml-2 -mt-1 px-2 py-1 rounded-md mb-2">
-            <h1 class="text-base font-semibold text-gray-800 tracking-wide flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 mr-2">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                </svg>
-                <span>Keylogger</span>
-            </h1>
-        </router-link>
-
-        <p class="text-sm text-gray-600 mb-4">Press a key to get more information</p>
-
+    <tool-page name="Keylogger" description="Press a key to get more information">
         <div class="rounded-lg border border-gray-300">
             <div class="border-b border-gray-300 p-4 flex items-center justify-between">
                 <span class="text-gray-600 text-sm">which</span>
@@ -45,12 +34,17 @@
                 <span class="text-gray-600 text-sm">{{ code }}</span>
             </div>
         </div>
-    </div>
+    </tool-page>
 </template>
 
 <script>
+import ToolPage from '../../components/ToolPage.vue';
+
 export default {
     name: 'Keylogger',
+    components: {
+        ToolPage,
+    },
     data() {
         return {
             which: '',
