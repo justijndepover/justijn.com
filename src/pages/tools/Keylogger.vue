@@ -50,7 +50,7 @@
 
 <script>
 export default {
-    name: 'Page',
+    name: 'Keylogger',
     data() {
         return {
             which: '',

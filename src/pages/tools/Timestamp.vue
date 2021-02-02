@@ -50,7 +50,7 @@
 
 <script>
 export default {
-    name: 'Page',
+    name: 'Timestamp',
     data() {
         return {
             timestamp: '',
