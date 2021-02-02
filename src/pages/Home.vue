@@ -17,10 +17,10 @@
 
                 <h1 class="mb-6 text-3xl leading-8 font-bold text-gray-800 dark:text-gray-200 sm:leading-10 tracking-wide">👋 Hi, I'm Justijn</h1>
 
-                <span class="text-lg text-gray-500 dark:text-gray-400">
-                    A passionate full stack developer from belgium,
+                <span class="text-gray-500 dark:text-gray-400">
+                    Full stack developer from Belgium,
                     <br>currently working at <a class="font-bold hover:text-red-400" target="_blank" rel="nofollow, noreferrer" href="https://www.in2red.be">in2red</a>.
-                    <!-- <br><br>I build and maintain a couple <a class="font-bold hover:text-red-400" target="_blank" rel="nofollow, noreferrer" href="https://github.com/justijndepover">open source projects</a> on Github. Mostly Laravel. -->
+                    <br><br>I build and maintain a couple <a class="font-bold hover:text-red-400" target="_blank" rel="nofollow, noreferrer" href="https://github.com/justijndepover">open source projects</a>. Mostly for Laravel.
                 </span>
 
                 <div class="mt-4 flex justify-center">
