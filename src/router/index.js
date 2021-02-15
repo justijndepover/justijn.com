@@ -5,6 +5,7 @@ import Tools from '../pages/Tools.vue';
 import Keylogger from '../pages/tools/Keylogger.vue';
 import Timestamp from '../pages/tools/Timestamp.vue';
 import ImageGenerator from '../pages/tools/ImageGenerator.vue';
+import Encoding from '../pages/tools/Encoding.vue';
 import NotFound from '../pages/404.vue';
 
 Vue.use(Router);
@@ -36,6 +37,11 @@ Vue.router = new Router({
             name: 'image-generator',
             path: '/tools/image-generator',
             component: ImageGenerator,
+        },
+        {
+            name: 'base64',
+            path: '/tools/base64',
+            component: Encoding,
         },
         {
             path: '*',

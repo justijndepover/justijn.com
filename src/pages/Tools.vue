@@ -22,6 +22,13 @@
                 <p>Generate a placeholder image with a specific width & height</p>
             </template>
         </panel-link>
+
+        <panel-link :to="{ name: 'base64' }">
+            Base64
+            <template #description>
+                <p>Encode and decode strings with <pre class="inline bg-gray-100 text-xs font-medium p-1 rounded">Base64</pre></p>
+            </template>
+        </panel-link>
     </div>
 </template>
 
