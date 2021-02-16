@@ -6,6 +6,7 @@ import Keylogger from '../pages/tools/Keylogger.vue';
 import Timestamp from '../pages/tools/Timestamp.vue';
 import ImageGenerator from '../pages/tools/ImageGenerator.vue';
 import Encoding from '../pages/tools/Encoding.vue';
+import Scratchpad from '../pages/tools/Scratchpad.vue';
 import NotFound from '../pages/404.vue';
 
 Vue.use(Router);
@@ -42,6 +43,11 @@ Vue.router = new Router({
             name: 'base64',
             path: '/tools/base64',
             component: Encoding,
+        },
+        {
+            name: 'scratchpad',
+            path: '/tools/scratchpad',
+            component: Scratchpad,
         },
         {
             path: '*',
