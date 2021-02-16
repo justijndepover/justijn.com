@@ -29,6 +29,13 @@
                 <p>Encode and decode strings with <pre class="inline bg-gray-100 text-xs font-medium p-1 rounded">Base64</pre></p>
             </template>
         </panel-link>
+
+        <panel-link :to="{ name: 'scratchpad' }">
+            Scratchpad
+            <template #description>
+                <p>Quickly store snippets</p>
+            </template>
+        </panel-link>
     </div>
 </template>
 
