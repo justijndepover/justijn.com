@@ -7,6 +7,7 @@ import Timestamp from '../pages/tools/Timestamp.vue';
 import ImageGenerator from '../pages/tools/ImageGenerator.vue';
 import Encoding from '../pages/tools/Encoding.vue';
 import Scratchpad from '../pages/tools/Scratchpad.vue';
+import JsonFormatter from '../pages/tools/JsonFormatter.vue';
 import NotFound from '../pages/404.vue';
 
 Vue.use(Router);
@@ -48,6 +49,11 @@ Vue.router = new Router({
             name: 'scratchpad',
             path: '/tools/scratchpad',
             component: Scratchpad,
+        },
+        {
+            name: 'json-formatter',
+            path: '/tools/json-formatter',
+            component: JsonFormatter,
         },
         {
             path: '*',

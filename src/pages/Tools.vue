@@ -36,6 +36,13 @@
                 <p>Quickly store snippets</p>
             </template>
         </panel-link>
+
+        <panel-link :to="{ name: 'json-formatter' }">
+            JSON Formatter
+            <template #description>
+                <p>Format truncated or minified JSON into a readable format, or vise versa</p>
+            </template>
+        </panel-link>
     </div>
 </template>
 
