@@ -1,5 +1,5 @@
 <template>
-    <tool-page name="JSON Prettifier" description="Format truncated or minified JSON into a readable format, or vise versa">
+    <tool-page name="JSON Formatter" description="Format truncated or minified JSON into a readable format, or vise versa">
         <div class="rounded-lg border border-gray-300 p-4">
             <text-input-area label="Input text" v-model="text" class="mb-4" />
 
