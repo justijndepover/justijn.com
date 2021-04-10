@@ -50,6 +50,7 @@
 
 <script>
 import Fuse from 'fuse.js';
+import { EventBus } from '../eventbus';
 
 export default {
     name: 'command-palette',
@@ -109,6 +110,13 @@ export default {
             if (e.key === 'Escape') {
                 this.show = false;
             }
+        });
+
+        EventBus.$on('open-command-palette', () => {
+            this.show = true;
+            this.$nextTick(() => {
+                this.$refs.input.focus();
+            });
         });
     },
     methods: {

@@ -1,5 +1,8 @@
 <template>
-    <router-link :to="to" class="rounded-lg border border-gray-300 bg-white px-6 py-4 mb-4 hover:border-gray-400 flex justify-between">
+    <router-link
+        :to="to"
+        class="rounded-lg border border-gray-300 bg-white px-6 py-4 mb-4 hover:border-gray-400 flex justify-between outline-none focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200"
+    >
         <div class="flex flex-1 items-center">
             <div class="text-sm">
                 <p class="font-medium text-gray-900">
