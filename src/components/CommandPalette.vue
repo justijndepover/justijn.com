@@ -13,7 +13,7 @@
                     <div class="absolute inset-0 bg-gray-500 opacity-25"></div>
                 </div>
 
-                <div class="sm:my-8 sm:max-w-xl w-full z-10" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+                <div class="relative sm:my-8 sm:max-w-xl w-full z-10" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
                     <div class="border bg-white rounded-lg overflow-hidden shadow-xl w-full">
                         <input
                             type="text"
