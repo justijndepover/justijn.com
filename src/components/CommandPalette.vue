@@ -10,16 +10,16 @@
         <div v-show="show" class="fixed z-10 inset-0 overflow-y-auto">
             <div class="block sm:flex items-start justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:p-0">
                 <div class="fixed inset-0" aria-hidden="true" @click="show = false">
-                    <div class="absolute inset-0 bg-gray-500 opacity-25"></div>
+                    <div class="absolute inset-0 bg-gray-500 dark:bg-gray-900 opacity-25"></div>
                 </div>
 
                 <div class="relative sm:my-8 sm:max-w-xl w-full z-10" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-                    <div class="border bg-white rounded-lg overflow-hidden shadow-xl w-full">
+                    <div class="border bg-white dark:bg-gray-700 dark:border-gray-800 rounded-lg overflow-hidden shadow-xl w-full">
                         <input
                             type="text"
                             autofocus
                             ref="input"
-                            class="outline-none w-full px-6 py-4 text-gray-700"
+                            class="outline-none w-full px-6 py-4 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700"
                             placeholder="Search..."
                             v-model="search"
                             @keydown.enter="onEnter"
@@ -29,13 +29,13 @@
                         >
                     </div>
 
-                    <div class="mt-4 bg-white rounded-lg border overflow-hidden" v-show="filteredPages.length">
+                    <div class="mt-4 bg-white dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-gray-800 overflow-hidden" v-show="filteredPages.length">
                         <ul class="text-left">
                             <li
                                 v-for="(page, index) in filteredPages"
                                 :key="index"
-                                class="py-3 px-5 hover:bg-gray-50 text-gray-700 text-sm cursor-pointer"
-                                :class="(index == selected) ? 'bg-gray-50' : ''"
+                                class="py-3 px-5 hover:bg-gray-50 text-gray-700 dark:hover:bg-gray-800 dark:text-gray-500 text-sm cursor-pointer"
+                                :class="(index == selected) ? 'bg-gray-50 dark:bg-gray-800' : ''"
                                 @click="navigate(page)"
                             >
                                 {{ page.name }}

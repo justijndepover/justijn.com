@@ -1,37 +1,37 @@
 <template>
     <tool-page name="Keylogger" description="Press a key to get more information">
-        <div class="rounded-lg border border-gray-300">
-            <div class="border-b border-gray-300 p-4 flex items-center justify-between">
-                <span class="text-gray-600 text-sm">which</span>
-                <span class="text-gray-600 text-sm">{{ which }}</span>
+        <div class="rounded-lg border border-gray-300 dark:border-gray-800">
+            <div class="border-b border-gray-300 dark:border-gray-800 p-4 flex items-center justify-between">
+                <span class="text-gray-600 dark:text-gray-400 text-sm">which</span>
+                <span class="text-gray-600 dark:text-gray-400 text-sm">{{ which }}</span>
             </div>
-            <div class="border-b border-gray-300 p-4 flex items-center justify-between">
-                <span class="text-gray-600 text-sm">shiftKey</span>
-                <span class="text-gray-600 text-sm">{{ shiftKey }}</span>
+            <div class="border-b border-gray-300 dark:border-gray-800 p-4 flex items-center justify-between">
+                <span class="text-gray-600 dark:text-gray-400 text-sm">shiftKey</span>
+                <span class="text-gray-600 dark:text-gray-400 text-sm">{{ shiftKey }}</span>
             </div>
-            <div class="border-b border-gray-300 p-4 flex items-center justify-between">
-                <span class="text-gray-600 text-sm">ctrlKey</span>
-                <span class="text-gray-600 text-sm">{{ ctrlKey }}</span>
+            <div class="border-b border-gray-300 dark:border-gray-800 p-4 flex items-center justify-between">
+                <span class="text-gray-600 dark:text-gray-400 text-sm">ctrlKey</span>
+                <span class="text-gray-600 dark:text-gray-400 text-sm">{{ ctrlKey }}</span>
             </div>
-            <div class="border-b border-gray-300 p-4 flex items-center justify-between">
-                <span class="text-gray-600 text-sm">altKey</span>
-                <span class="text-gray-600 text-sm">{{ altKey }}</span>
+            <div class="border-b border-gray-300 dark:border-gray-800 p-4 flex items-center justify-between">
+                <span class="text-gray-600 dark:text-gray-400 text-sm">altKey</span>
+                <span class="text-gray-600 dark:text-gray-400 text-sm">{{ altKey }}</span>
             </div>
-            <div class="border-b border-gray-300 p-4 flex items-center justify-between">
-                <span class="text-gray-600 text-sm">metaKey</span>
-                <span class="text-gray-600 text-sm">{{ metaKey }}</span>
+            <div class="border-b border-gray-300 dark:border-gray-800 p-4 flex items-center justify-between">
+                <span class="text-gray-600 dark:text-gray-400 text-sm">metaKey</span>
+                <span class="text-gray-600 dark:text-gray-400 text-sm">{{ metaKey }}</span>
             </div>
-            <div class="border-b border-gray-300 p-4 flex items-center justify-between">
-                <span class="text-gray-600 text-sm">key</span>
-                <span class="text-gray-600 text-sm">{{ key }}</span>
+            <div class="border-b border-gray-300 dark:border-gray-800 p-4 flex items-center justify-between">
+                <span class="text-gray-600 dark:text-gray-400 text-sm">key</span>
+                <span class="text-gray-600 dark:text-gray-400 text-sm">{{ key }}</span>
             </div>
-            <div class="border-b border-gray-300 p-4 flex items-center justify-between">
-                <span class="text-gray-600 text-sm">keyCode</span>
-                <span class="text-gray-600 text-sm">{{ keyCode }}</span>
+            <div class="border-b border-gray-300 dark:border-gray-800 p-4 flex items-center justify-between">
+                <span class="text-gray-600 dark:text-gray-400 text-sm">keyCode</span>
+                <span class="text-gray-600 dark:text-gray-400 text-sm">{{ keyCode }}</span>
             </div>
             <div class="p-4 flex items-center justify-between">
-                <span class="text-gray-600 text-sm">code</span>
-                <span class="text-gray-600 text-sm">{{ code }}</span>
+                <span class="text-gray-600 dark:text-gray-400 text-sm">code</span>
+                <span class="text-gray-600 dark:text-gray-400 text-sm">{{ code }}</span>
             </div>
         </div>
     </tool-page>

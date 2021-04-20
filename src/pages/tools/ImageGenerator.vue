@@ -1,6 +1,6 @@
 <template>
     <tool-page name="Image Generator" description="Generate a placeholder image with a specific width & height">
-        <div class="rounded-lg border border-gray-300 p-4 mb-4">
+        <div class="rounded-lg border border-gray-300 dark:border-gray-800 p-4 mb-4">
             <form @submit.prevent="setCanvas">
                 <text-input label="Enter the width" placeholder="1024" v-model="width" :error="widthError" class="mb-4" />
                 <text-input label="Enter the height" placeholder="768" v-model="height" :error="heightError" class="mb-4" />
@@ -28,7 +28,7 @@
             </svg>
         </div>
 
-        <div class="rounded-lg border border-gray-300 p-4" v-show="showCanvas">
+        <div class="rounded-lg border border-gray-300 dark:border-gray-800 p-4" v-show="showCanvas">
             <canvas ref="canvas" class="w-full h-auto"></canvas>
         </div>
     </tool-page>

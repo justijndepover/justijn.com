@@ -1,6 +1,6 @@
 <template>
     <div>
-        <label v-if="label" :for="idComputed" class="block text-sm font-medium text-gray-700">{{ label }}</label>
+        <label v-if="label" :for="idComputed" class="block text-sm font-medium text-gray-700 dark:text-gray-400">{{ label }}</label>
 
         <div class="relative rounded-md" :class="label ? 'mt-1' : ''">
             <input
@@ -14,7 +14,7 @@
                 @input="$emit('input', $event.target.value)"
                 :autocomplete="autocomplete"
                 :autofocus="autofocus"
-                class="appearance-none bg-white border outline-none focus:ring-1 ring-offset-0 block w-full pl-3 py-2 sm:text-sm text-base leading-normal rounded-md"
+                class="appearance-none bg-white dark:bg-gray-800 border dark:border-gray-700 outline-none focus:ring-1 ring-offset-0 block w-full pl-3 py-2 sm:text-sm text-base leading-normal rounded-md"
                 :class="error ? 'pr-10 border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500' : 'pr-3 border-gray-300 text-gray-800 focus:ring-green-400 focus:border-green-400 placeholder-gray-400'">
 
             <div v-if="error" class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">

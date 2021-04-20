@@ -1,6 +1,6 @@
 <template>
     <tool-page name="Base64" description="Encode and decode strings with Base64">
-        <div class="rounded-lg border border-gray-300 p-4">
+        <div class="rounded-lg border border-gray-300 dark:border-gray-800 p-4">
             <text-input-area label="Input text" v-model="text" class="mb-4" />
 
             <div class="flex items-center mb-4">

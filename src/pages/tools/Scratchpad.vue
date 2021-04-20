@@ -1,6 +1,6 @@
 <template>
     <tool-page name="Scratchpad" description="Quickly store snippets">
-        <div class="rounded-lg border border-gray-300 p-4">
+        <div class="rounded-lg border border-gray-300 dark:border-gray-800 p-4">
             <text-input-area placeholder="Start typing" v-model="text" rows="30" autofocus />
         </div>
     </tool-page>

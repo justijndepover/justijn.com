@@ -8,13 +8,13 @@
             </button>
         </template>
 
-        <div class="rounded-lg border border-gray-300">
-            <div class="border-b border-gray-300 p-4 flex items-center justify-between">
-                <span class="text-gray-600 text-sm">The current unix timestamp is</span>
-                <span class="text-gray-600 text-sm">{{ timestamp }}</span>
+        <div class="rounded-lg border border-gray-300 dark:border-gray-800">
+            <div class="border-b border-gray-300 dark:border-gray-800 p-4 flex items-center justify-between">
+                <span class="text-gray-600 dark:text-gray-400 text-sm">The current unix timestamp is</span>
+                <span class="text-gray-600 dark:text-gray-400 text-sm">{{ timestamp }}</span>
             </div>
             <div class="p-4">
-                <label class="block text-sm font-medium text-gray-700" for="timestamp-field">Enter your own timestamp</label>
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-400" for="timestamp-field">Enter your own timestamp</label>
 
                 <div class="relative rounded-md mt-2 mb-4">
                     <input
@@ -23,11 +23,11 @@
                         placeholder="Unix timestamp"
                         autocomplete="off"
                         @change="setTimestamp"
-                        class="appearance-none bg-white border outline-none focus:ring-1 ring-offset-0 block w-full pl-3 py-2 sm:text-sm text-base leading-normal rounded-md pr-3 border-gray-300 text-gray-800 focus:ring-green-300 focus:border-green-300 placeholder-gray-400">
+                        class="appearance-none bg-white dark:bg-gray-800 border dark:border-gray-700 outline-none focus:ring-1 ring-offset-0 block w-full pl-3 py-2 sm:text-sm text-base leading-normal rounded-md pr-3 border-gray-300 text-gray-800 focus:ring-green-300 focus:border-green-300 placeholder-gray-400">
                 </div>
 
-                <span class="block text-sm font-medium text-gray-700">equals:</span>
-                <span class="block text-sm text-gray-700">{{ formattedTime }}</span>
+                <span class="block text-sm font-medium text-gray-700 dark:text-gray-400">equals:</span>
+                <span class="block text-sm text-gray-700 dark:text-gray-400">{{ formattedTime }}</span>
             </div>
         </div>
     </tool-page>
