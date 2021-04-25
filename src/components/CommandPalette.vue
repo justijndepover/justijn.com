@@ -38,7 +38,8 @@
                                 :class="(index == selected) ? 'bg-gray-50 dark:bg-gray-800' : ''"
                                 @click="navigate(page)"
                             >
-                                {{ page.name }}
+                                <span class="block font-semibold">{{ page.name }}</span>
+                                <span class="text-sm text-gray-500">{{ page.description }}</span>
                             </li>
                         </ul>
                     </div>
@@ -50,6 +51,7 @@
 
 <script>
 import Fuse from 'fuse.js';
+import confetti from 'canvas-confetti';
 import { EventBus } from '../eventbus';
 
 export default {
@@ -64,26 +66,37 @@ export default {
                 {
                     name: 'KeyLogger',
                     url: 'keylogger',
+                    description: 'Check what the Keycode or Key is for a particular key press',
                 },
                 {
                     name: 'Timestamp',
                     url: 'timestamp',
+                    description: 'A set of timestamp functions',
                 },
                 {
                     name: 'Image generator',
                     url: 'image-generator',
+                    description: 'Generate a placeholder image with a specific width & height',
                 },
                 {
                     name: 'Base64',
                     url: 'base64',
+                    description: 'Encode and decode strings with Base64',
                 },
                 {
                     name: 'Scratchpad',
                     url: 'scratchpad',
+                    description: 'Quickly store snippets',
                 },
                 {
                     name: 'JSON Formatter',
                     url: 'json-formatter',
+                    description: 'Format truncated or minified JSON into a readable format, or vise versa',
+                },
+                {
+                    name: 'Confetti',
+                    function: 'shootConfetti',
+                    description: 'Hooray',
                 },
             ],
         };
@@ -123,7 +136,11 @@ export default {
         navigate(page) {
             this.show = false;
             this.search = '';
-            this.$router.push({ name: page.url });
+            if (page.url) {
+                this.$router.push({ name: page.url });
+            } else if (page.function) {
+                this.shootConfetti();
+            }
         },
         onEnter() {
             if (this.filteredPages[this.selected]) {
@@ -138,6 +155,38 @@ export default {
         },
         onChange() {
             this.selected = 0;
+        },
+        fire(particleRatio, opts) {
+            const count = 200;
+            const defaults = {
+                origin: { y: 0.7 },
+            };
+
+            confetti({ ...defaults, ...opts, particleCount: Math.floor(count * particleRatio) });
+        },
+        shootConfetti() {
+            this.fire(0.25, {
+                spread: 26,
+                startVelocity: 55,
+            });
+            this.fire(0.2, {
+                spread: 60,
+            });
+            this.fire(0.35, {
+                spread: 100,
+                decay: 0.91,
+                scalar: 0.8,
+            });
+            this.fire(0.1, {
+                spread: 120,
+                startVelocity: 25,
+                decay: 0.92,
+                scalar: 1.2,
+            });
+            this.fire(0.1, {
+                spread: 120,
+                startVelocity: 45,
+            });
         },
     },
     computed: {
