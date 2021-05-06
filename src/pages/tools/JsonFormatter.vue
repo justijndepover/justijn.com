@@ -12,8 +12,21 @@
                 </button>
             </div>
 
-            <div v-if="result" class="mt-4 px-3 py-2 border border-gray-300 text-gray-800 rounded-md sm:text-sm text-base leading-normal">
-                <pre :class="minified ? 'whitespace-normal' : ''" v-html="result"></pre>
+            <div
+                v-if="result"
+                class="px-3 py-2 border border-gray-300 text-gray-800 rounded-md sm:text-sm text-base leading-normal bg-white z-10"
+                :class="fullscreen ? 'absolute inset-0' : 'relative mt-4'"
+            >
+                <button
+                    class="top-3 right-3 p-1 text-gray-500 hover:text-gray-800 hover:bg-gray-50 rounded transition-all outline-none focus:outline-none focus:bg-gray-50 focus:text-gray-800"
+                    @click="toggleFullscreen"
+                    :class="fullscreen ? 'fixed' : 'absolute'"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                    </svg>
+                </button>
+                <pre :class="minified ? 'whitespace-normal' : ''" class="overflow-x-scroll" v-html="result"></pre>
             </div>
 
             <div v-if="error" class="mt-4 px-3 py-2 border border-gray-300 text-red-500 rounded-md sm:text-sm text-base leading-normal" v-html="error">
@@ -38,7 +51,14 @@ export default {
             result: '',
             error: '',
             minified: false,
+            fullscreen: false,
         };
+    },
+    mounted() {
+        document.addEventListener('keydown', this.handleEscape);
+    },
+    destroyed() {
+        document.removeEventListener('keydown', this.handleEscape);
     },
     methods: {
         format() {
@@ -61,6 +81,14 @@ export default {
             } catch (error) {
                 this.result = '';
                 this.error = 'Could not convert the input. Are you sure you entered correct JSON?';
+            }
+        },
+        toggleFullscreen() {
+            this.fullscreen = !this.fullscreen;
+        },
+        handleEscape(e) {
+            if (e.key === 'Escape') {
+                this.fullscreen = false;
             }
         },
     },
