@@ -112,12 +112,6 @@ export default {
         document.addEventListener('keydown', (e) => {
             if (e.key === 'k' && (e.ctrlKey || e.metaKey)) {
                 this.show = !this.show;
-
-                if (this.show) {
-                    this.$nextTick(() => {
-                        this.$refs.input.focus();
-                    });
-                }
             }
 
             if (e.key === 'Escape') {
@@ -127,9 +121,6 @@ export default {
 
         EventBus.$on('open-command-palette', () => {
             this.show = true;
-            this.$nextTick(() => {
-                this.$refs.input.focus();
-            });
         });
     },
     methods: {
@@ -196,6 +187,15 @@ export default {
             }
 
             return this.fuse.search(this.search).map((page) => page.item);
+        },
+    },
+    watch: {
+        show(newValue) {
+            if (newValue === true) {
+                this.$nextTick(() => {
+                    this.$refs.input.focus();
+                });
+            }
         },
     },
 };
