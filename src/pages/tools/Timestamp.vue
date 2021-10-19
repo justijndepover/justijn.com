@@ -59,7 +59,7 @@ export default {
             const date = new Date(unixTimestamp * 1000);
 
             const year = date.getUTCFullYear();
-            const month = date.getUTCMonth();
+            const month = date.getUTCMonth() + 1;
             const day = date.getUTCDate();
 
             const hours = date.getUTCHours();
