@@ -87,7 +87,7 @@ export default {
     name: 'navigation',
     methods: {
         openCommandPalette() {
-            EventBus.$emit('open-command-palette');
+            EventBus.$emit('command-palette', true);
         },
     },
 };

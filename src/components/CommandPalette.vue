@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="relative sm:my-8 sm:max-w-xl w-full z-10" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-                    <div class="border bg-white dark:bg-gray-700 dark:border-gray-800 rounded-lg overflow-hidden shadow-xl w-full">
+                    <div class="border border-gray-300 bg-white dark:bg-gray-700 dark:border-gray-800 rounded-lg overflow-hidden w-full">
                         <input
                             type="text"
                             autofocus
@@ -29,7 +29,7 @@
                         >
                     </div>
 
-                    <div class="mt-4 bg-white dark:bg-gray-900 rounded-lg border border-gray-100 dark:border-gray-800 overflow-hidden" v-show="filteredPages.length">
+                    <div class="mt-4 bg-white dark:bg-gray-900 rounded-lg border border-gray-300 dark:border-gray-800 overflow-hidden" v-show="filteredPages.length">
                         <ul class="text-left">
                             <li
                                 v-for="(page, index) in filteredPages"
@@ -109,18 +109,12 @@ export default {
             ],
         });
 
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'k' && (e.ctrlKey || e.metaKey)) {
-                this.show = !this.show;
-            }
-
-            if (e.key === 'Escape') {
-                this.show = false;
-            }
+        EventBus.$on('command-palette', (open) => {
+            this.show = open;
         });
 
-        EventBus.$on('open-command-palette', () => {
-            this.show = true;
+        EventBus.$on('toggle-command-palette', () => {
+            this.show = !this.show;
         });
     },
     methods: {
