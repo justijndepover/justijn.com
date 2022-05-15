@@ -19,7 +19,15 @@ export default {
         Navigation,
         CommandPalette,
     },
+    data() {
+        return {
+            cheatCode: ['ArrowUp', 'ArrowDown', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'],
+            cheatCodePosition: 0,
+        };
+    },
     mounted() {
+        console.log('Inspecting the console hah? Try to see if you can find the hidden secret!');
+
         document.addEventListener('keydown', (e) => {
             if (e.key === 'k' && (e.ctrlKey || e.metaKey)) {
                 EventBus.$emit('toggle-command-palette');
@@ -33,7 +41,24 @@ export default {
             if (e.key === 'Escape') {
                 EventBus.$emit('command-palette', false);
             }
+
+            const requiredKey = this.cheatCode[this.cheatCodePosition];
+
+            if (e.key === requiredKey) {
+                this.cheatCodePosition += 1;
+                if (this.cheatCodePosition === this.cheatCode.length) {
+                    this.activateCheatCode();
+                    this.cheatCodePosition = 0;
+                }
+            } else {
+                this.cheatCodePosition = 0;
+            }
         });
+    },
+    methods: {
+        activateCheatCode() {
+            window.alert('cheat code activated');
+        },
     },
 };
 </script>
